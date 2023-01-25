@@ -1,0 +1,117 @@
+body {
+  height: 100vh;
+  background: rgb(205, 254, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(205, 254, 255, 1) 0%,
+    rgba(244, 255, 137, 1) 100%
+  );
+}
+
+#section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calculator {
+  width: 400px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: -1px -2px 30px 0px rgb(161, 231, 255);
+  -moz-box-shadow: -1px -2px 30px 0px rgb(161, 220, 255);
+  box-shadow: -1px -2px 30px 0px rgb(161, 233, 255);
+  overflow: hidden;
+}
+
+#output-section {
+  background: rgb(255, 252, 255);
+  min-height: 120px;
+  border-bottom: 1px solid rgb(215, 213, 213);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+
+#output-section > div > p {
+  word-break: break-all;
+}
+#btns-section {
+  background: rgb(223, 254, 255);
+  height: 320px;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.btn {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn p {
+  margin: 5px;
+  background-color: rgb(103, 122, 128);
+  color: rgb(243, 255, 137);
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.row:last-child .btn:last-child > p {
+  width: 100%;
+  border-radius: 20px;
+  align-self: flex-end;
+}
+
+.row:last-child .btn:last-child {
+  justify-content: flex-end;
+  width: 100%;
+  flex-basis: 50%;
+  padding-right: 15px;
+}
+
+.btn p:hover {
+  cursor: pointer;
+  transition: 0.1s;
+  width: 55px;
+  height: 55px;
+  -webkit-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 1);
+  position: absolute;
+}
+
+.row:last-child .btn:last-child > p:hover {
+  position: static;
+}
+
+#output {
+  padding: 0;
+  margin: 0;
+  font-size: 35px;
+  color: rgb(72, 116, 125);
+}
+
+#result {
+  font-size: 45px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  color: rgb(143, 138, 7);
+}
