@@ -47,13 +47,16 @@ for (let i = 0; i < btns.length; i++) {
       outputStr += inputSymbol;
     } else if (btns[i].classList.contains("remove")) {
       outputStr = outputStr.slice(0, -1);
-      if(outputStr < 1) {
-        outputStr = "0"
+      if (outputStr < 1) {
+        outputStr = "0";
       }
     } else if (inputSymbol == "=") {
       result.innerText = evil(outputStr);
       isNewOperation = true;
-    } else if (inputSymbol != "+/_") {
+    } else if (
+      inputSymbol != "+/_" &&
+      !(inputSymbol == "." && outputStr.includes("."))
+    ) {
       outputStr += inputSymbol;
     }
 
